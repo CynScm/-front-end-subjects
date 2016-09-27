@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>水平导航栏</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;font-size: 14px;}
+		/*margin:0 auto
+		    1.需要配合宽度width才生效
+		    2.使用了position属性会导致其失效
+		*/
+		.nav{width:800px;margin:0 auto ;}
+		ul{list-style: none;}
+		.li0{float: left;position: relative;}
+		.nav a{display: block;text-decoration: none;width: 100px;height: 45px;line-height: 45px;background-color: #999;color: #111;text-align: center;}
+		.nav a:hover{color: #fff;background-color: #f00;}
+		.nav1{position: absolute;left:0;display: none;}
+		.li0:hover .nav1{display: block;background-color: #bbb;}
+	</style>
+</head>
+<body>
+    <ul class="nav">
+    	<li class="li0"><a href="">首页</a></li>
+    	<li class="li0"><a href="">前端</a>
+			<ul class="nav1">
+				<li><a href="">前端</a></li>
+				<li><a href="">前端</a></li>
+				<li><a href="">前端</a></li>
+			</ul>
+    	</li>
+    	<li class="li0"><a href="">后端</a>
+    		<ul class="nav1">
+				<li><a href="">后端</a></li>
+				<li><a href="">后端</a></li>
+				<li><a href="">后端</a></li>
+			</ul>
+		</li>
+    	<li class="li0"><a href="">数据库</a>
+    		<ul class="nav1">
+				<li><a href="">数据库</a></li>
+				<li><a href="">数据库</a></li>
+				<li><a href="">数据库</a></li>
+			</ul>
+		</li>
+    	<li class="li0"><a href="">代码实战</a>
+    		<ul class="nav1">
+				<li><a href="">代码1</a></li>
+				<li><a href="">代码2</a></li>
+				<li><a href="">代码3</a></li>
+			</ul>
+		</li>
+    	<li class="li0"><a href="">读书笔记</a>
+    		<ul class="nav1">
+				<li><a href="">笔记1</a></li>
+				<li><a href="">笔记2</a></li>
+				<li><a href="">笔记3</a></li>
+			</ul>
+		</li>
+    	<li class="li0"><a href="">联系我</a>
+    		<ul class="nav1">
+				<li><a href="">我的邮箱</a></li>
+				<li><a href="">我的QQ</a></li>
+				<li><a href="">我的微信</a></li>
+			</ul>
+		</li>
+    </ul>
+</body>
+</html>

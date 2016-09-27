@@ -1,0 +1,35 @@
+.section {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 30px;
+    width: 130px;
+    font-size: 16px;
+}
+.number {
+    -webkit-flex: 1;
+    flex: 1;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-align: center;
+}
+.decrement, .increment {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 20px;
+}

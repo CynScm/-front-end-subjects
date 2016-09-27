@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>长按事件</title>
+	<link rel="stylesheet" type="text/css" href="event.css" />
+	<script type="text/javascript" src="event.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+    <div class="section">
+        <div class="decrement" onmousedown="tapEvent(event, 'decrement')" ontouchstart="tapEvent(event, 'decrement')">－</div>
+        <input class="number" value="1">
+        <div class="increment" onmousedown="tapEvent(event, 'increment')" ontouchstart="tapEvent(event, 'increment')">＋</div>
+    </div>
+</div>
+</body>
+</html>

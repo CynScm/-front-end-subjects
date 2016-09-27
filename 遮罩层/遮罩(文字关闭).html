@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>遮罩层</title>
+	<style type="text/css">
+		body { 
+			font-family:Arial, Helvetica, sans-serif; 
+			font-size:12px; 
+			margin:0; 
+			 } 
+		#main { 
+			height:1800px; 
+			padding-top:90px; 
+			border: 1px solid;
+			text-align:center; 
+			 } 
+		#fullbg { 
+			background-color:#777; 
+			left:0; 
+			opacity:0.9; 
+			position:absolute; 
+			top:0; 
+			z-index:3; 
+			filter:alpha(opacity=50); 
+			-moz-opacity:0.5; 
+			-khtml-opacity:0.5; 
+			} 
+		#dialog { 
+			background-color: #fff;
+			border:5px solid rgba(0,0,0, 0.4); 
+			padding: 1px;
+			display: none;
+			position:fixed !important;
+			position: absolute;
+			z-index: 4;
+			height:400px; 
+			width: 400px;
+			left:50%;
+			top:50%;
+			margin: -200px 0 0 -200px;
+			border-radius:5px; 
+			} 
+		#dialog p { 
+			margin:0 0 12px; 
+			height:24px; 
+			line-height:24px; 
+			background:#CCCCCC; 
+			} 
+		#dialog p.close { 
+			text-align:right; 
+			padding-right:10px; 
+			} 
+		#dialog p.close a { 
+			color:#fff; 
+			text-decoration:none; 
+			}
+	</style>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function showBg(){
+			var bh=$("body").height();
+			var bw=$("body").width();
+			$("#fullbg").css({
+				height:bh,
+				width:bw,
+				display:"block"
+			});
+			$("#dialog").show();
+		}
+		function closeBg() { 
+			$("#fullbg,#dialog").hide(); 
+		} 
+	</script>
+</head>
+<body>
+	<div id="main">
+		<a href="javascript:showBg();">点击这里查看效果</a>
+		<div id="fullbg"></div>
+		<div id="dialog">
+        	<p class="close"><a href="#" onclick="closeBg();">关闭</a></p>
+        <div>正在加载，请稍后...</div>
+        </div>
+	</div>
+</body>
+</html>
