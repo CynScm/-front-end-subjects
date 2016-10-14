@@ -28,6 +28,7 @@
 			$("#banner_info").unbind().click(function(){window.open($("#banner_list a").eq(i).attr('href'), "_blank")});
 			$("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
 			document.getElementById("banner").style.background="";
+			if($("li").eq(i).attr('class')!='on')
 			$(this).toggleClass("on");
 			$(this).siblings().removeAttr("class");
 		});
