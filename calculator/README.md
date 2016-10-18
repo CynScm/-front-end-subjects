@@ -32,8 +32,8 @@ window.onload=function()
 		{						
 			aNum[i].onclick=function()
 			{	
-				if(!bOnOrOffClick)return;
-				
+				if(!bOnOrOffClick)return;//如果点“关机”，bOnOrOffClick为false,当输入值时，此时运行到这里，返回,无法输入
+	                                                 //其实在输符号时也应该加这句，但是因为本身符号不会显示， 所以可以不写。
 				if(bClear)
 				{					
 					
