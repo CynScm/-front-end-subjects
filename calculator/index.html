@@ -124,7 +124,8 @@ window.onload=function()
 				{
 					return;	
 				}
-				var n=eval(oText1.value+oPer.value+oText.value);			
+				var n=eval(oText1.value*Math.pow(10,10)+oPer.value+oText.value*Math.pow(10,10))/Math.pow(10,10);	
+				//防止出现计算bug ，比如0.1+0.2= 0.30000000000000004			
 				oText.value=n;
 				oText1.value='';
 				oPer.value='';	
